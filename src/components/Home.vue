@@ -29,6 +29,7 @@ export default defineComponent({
       nowInput: ""
     });
     let keypress = () => {
+      if(data.nowInput.trim()=="") return;
       data.resultList.push({ message: data.nowInput, type: "command" });
       //执行并得到结果
       try {
